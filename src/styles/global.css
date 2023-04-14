@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*
+CSS Organization {
+  display stuff 
+  positioning stuff 
+  box-model stuff 
+  typography 
+  manipulation 
+  miscelaneas, others 
+  media query 
+}
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+}
+
+body {
+  min-height: 100vh;
+  padding: 14px 82px;
+  background: #D9D9D9;
+  background-image: url('../assets/images/cs2-header-bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+}
