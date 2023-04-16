@@ -1,11 +1,15 @@
 import React from "react";
 
-import { Container } from "./styles";
+import Header from "../Header";
+
+import { Container, Wrapper } from "./styles";
 
 const Layout: React.FC = () => {
   return (
     <Container>
-      <h1>CS2</h1>
+      <Header />
+
+      <Wrapper></Wrapper>
     </Container>
   );
 };
