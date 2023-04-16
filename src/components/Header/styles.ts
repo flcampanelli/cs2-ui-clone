@@ -1,12 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  background-image: url("/src/assets/images/cs2-header-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   width: 100%;
   max-width: 1600px;
+  height: 930px;
   margin: 0 auto;
 `;
 
@@ -16,7 +24,7 @@ export const Figure = styled.figure`
 
   width: 100%;
   margin-top: 5px;
-  margin-left: 12px;
+  padding-left: 24px;
 `;
 
 export const HeaderImageContainer = styled.div`
@@ -25,7 +33,7 @@ export const HeaderImageContainer = styled.div`
   position: relative;
 
   width: 100%;
-  margin-top: 150px;
+  margin-top: 145px;
 
   img:nth-child(2) {
     position: absolute;
