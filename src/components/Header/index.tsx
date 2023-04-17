@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           />
 
           <img
-            src="/src/assets/images/logo_cs2_header.svg"
+            src="/src/assets/images/logo-cs2-header.svg"
             width="556"
             height="114"
             alt=""
