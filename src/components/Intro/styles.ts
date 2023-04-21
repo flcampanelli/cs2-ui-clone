@@ -6,7 +6,7 @@ export const Container = styled.section`
   align-items: center;
 
   width: 100%;
-  height: 938px;
+  min-height: 938px;
   background-image: url("/src/assets/images/bg-dark-blue.svg");
   background-size: cover;
   /* background-position: center; */
@@ -18,7 +18,7 @@ export const IntroBox = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  max-width: 630px;
+  max-width: 650px;
   min-height: 698px;
   padding: 50px 60px;
   background-color: #4d526a;
@@ -28,16 +28,17 @@ export const Title = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.95);
 
   & > span {
     margin: 0 auto;
-    font-size: 42px;
-    font-weight: normal;
+    font-size: 53px;
+    font-weight: 500;
+    line-height: 102%;
+    color: rgba(255, 255, 255, 0.95);
   }
 
   & > span:nth-child(2) {
-    font-weight: 600;
+    font-weight: 700;
   }
 `;
 
@@ -45,11 +46,15 @@ export const Description = styled.div`
   margin-top: 5px;
 
   text-align: justify;
-  font-size: 17.5px;
-  line-height: 145%;
+  font-size: 20px;
+  line-height: 120%;
 
   & > p {
-    margin-top: 20px;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
+  }
+
+  & > p:not(:nth-child(4)) {
+    margin-bottom: 25px;
   }
 `;

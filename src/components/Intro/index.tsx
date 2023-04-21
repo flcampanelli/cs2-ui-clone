@@ -7,7 +7,7 @@ const Intro: React.FC = () => {
     <Container>
       <IntroBox>
         <Title>
-          <span> A PRÓXIMA ERA DO </span>
+          <span>A PRÓXIMA ERA DO</span>
           <span>COUNTER-STRIKE</span>
           <span>COMEÇA NESTE INVERNO</span>
         </Title>

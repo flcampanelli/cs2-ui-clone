@@ -59,8 +59,8 @@ export const Subtitle = styled.div`
 
   & > h2 {
     color: #e0881e;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 600;
     transform: skewX(+20deg);
   }
 `;
