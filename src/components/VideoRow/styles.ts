@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+  reverse?: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
-  /* flex-direction: row-reverse; */
+  flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
   align-items: center;
 
   width: 100%;

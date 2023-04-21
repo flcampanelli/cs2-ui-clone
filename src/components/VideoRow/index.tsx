@@ -5,12 +5,12 @@ import { Container, SubIntro } from "./styles";
 interface VideoRowProps {
   title: string;
   description: string;
-  type?: "row" | "row-reverse";
+  reverse?: boolean;
 }
 
-const VideoRow: React.FC<VideoRowProps> = ({ title, description }) => {
+const VideoRow: React.FC<VideoRowProps> = ({ title, description, reverse }) => {
   return (
-    <Container>
+    <Container reverse={reverse}>
       <div
         style={{
           width: "550px",
