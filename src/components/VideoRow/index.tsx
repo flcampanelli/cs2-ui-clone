@@ -5,23 +5,29 @@ import { Container, SubIntro } from "./styles";
 interface VideoRowProps {
   title: string;
   description: string;
+  videoName: string;
   reverse?: boolean;
 }
 
-const VideoRow: React.FC<VideoRowProps> = ({ title, description, reverse }) => {
+const VideoRow: React.FC<VideoRowProps> = ({
+  title,
+  description,
+  videoName,
+  reverse,
+}) => {
   return (
     <Container reverse={reverse}>
-      <div
-        style={{
-          width: "550px",
-          height: "437px",
-          padding: "50px",
-        }}
+      <video
+        width="550"
+        height="437"
+        autoPlay
+        muted
+        loop
+        preload="auto"
+        style={{ padding: "50px" }}
       >
-        <div
-          style={{ width: "100%", height: "100%", background: "gray" }}
-        ></div>
-      </div>
+        <source src={`/src/assets/videos/${videoName}.mp4`} type="video/mp4" />
+      </video>
 
       <SubIntro>
         <h3>{title}</h3>
