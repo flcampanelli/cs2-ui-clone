@@ -1,42 +1,14 @@
 import React from "react";
 
-import {
-  Container,
-  Content,
-  HeaderText,
-  Description,
-  VideoContainer,
-  Overlay,
-} from "./styles";
-import {} from "../Intro/styles";
+import { Container, Content, HeaderText, Description } from "./styles";
 import VideoRow from "../VideoRow";
+import MainVideo from "../MainVideo";
 
 const Smokes: React.FC = () => {
   return (
     <Container>
       <Content>
-        {/* <iframe
-          width="100%"
-          height="620"
-          style={{ border: 0 }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          title="Counter-Strike 2: Responsive Smokes"
-          src="https://www.youtube.com/embed/_y9MpNcAitQ?autoplay=0&amp;showinfo=0&amp;autohide=1&amp;fs=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1&amp;iv_load_policy=3&amp;controls=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.counter-strike.net&amp;widgetid=1"
-          id="widget2"
-        ></iframe> */}
-
-        <VideoContainer>
-          <video width="100%" height="100%" autoPlay muted loop preload="auto">
-            <source
-              src="/src/assets/videos/video_smokes.mp4"
-              type="video/mp4"
-            />
-          </video>
-
-          <Overlay>
-            <h1>Counter-Strike 2:</h1>
-          </Overlay>
-        </VideoContainer>
+        <MainVideo title="Fumaças Interativas" />
 
         <Description>
           <HeaderText>O JOGO MUDOU</HeaderText>
