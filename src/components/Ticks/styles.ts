@@ -6,8 +6,8 @@ export const Container = styled.section`
   align-items: center;
 
   width: 100%;
-  min-height: 2485px;
-  background-image: url("/src/assets/images/bg-gray.svg");
+  min-height: 1445px;
+  background-image: url("/src/assets/images/bg-orange.svg");
   background-size: cover;
 `;
 
@@ -29,15 +29,26 @@ export const Description = styled.div`
 
   width: 100%;
   padding-bottom: 100px;
-  background: #eee;
+  background-color: #ff9b01;
 
   color: #111;
+
+  & > h3 {
+    max-width: 750px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 100%;
+  }
 
   & > p {
     max-width: 650px;
 
-    font-size: 22px;
     text-align: justify;
+    font-size: 22px;
   }
 `;
 

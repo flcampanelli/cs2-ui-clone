@@ -11,9 +11,10 @@ import {
 
 interface MainVideoProps {
   title: string;
+  videoName: string;
 }
 
-const MainVideo: React.FC<MainVideoProps> = ({ title }) => {
+const MainVideo: React.FC<MainVideoProps> = ({ title, videoName }) => {
   return (
     <Container>
       {/* <iframe
@@ -28,7 +29,10 @@ const MainVideo: React.FC<MainVideoProps> = ({ title }) => {
 
       <VideoContainer>
         <video width="100%" height="100%" autoPlay muted loop preload="auto">
-          <source src="/src/assets/videos/video_smokes.mp4" type="video/mp4" />
+          <source
+            src={`/src/assets/videos/${videoName}.mp4`}
+            type="video/mp4"
+          />
         </video>
 
         <Overlay>

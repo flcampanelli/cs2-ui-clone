@@ -8,7 +8,7 @@ const Smokes: React.FC = () => {
   return (
     <Container>
       <Content>
-        <MainVideo title="Fumaças Interativas" />
+        <MainVideo title="Fumaças Interativas" videoName="video_smokes" />
 
         <Description>
           <HeaderText>O JOGO MUDOU</HeaderText>
