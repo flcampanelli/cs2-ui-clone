@@ -1,26 +1,42 @@
 import React from "react";
 import ReactCompareImage from "react-compare-image";
 
-import { Container, Header } from "./styles";
+import { Container, Header, CompareImageWrapper, ImageLabel } from "./styles";
 
-const CompareSlider: React.FC = () => {
+interface CompareSliderProps {
+  headerText: string;
+  bodyText: string;
+  exampleMap: string;
+  leftImageName: string;
+  rightImageName: string;
+}
+
+const CompareSlider: React.FC<CompareSliderProps> = ({
+  headerText,
+  bodyText,
+  exampleMap,
+  leftImageName,
+  rightImageName,
+}) => {
   return (
     <Container>
-      <Header>Mapas reformulados</Header>
+      <Header>{headerText}</Header>
 
-      <h4>
-        Os mapas reformulados foram refeitos do zero, aproveitando todas as
-        novas ferramentas e recursos de renderização da Source 2.
-      </h4>
+      <h4>{bodyText}</h4>
 
       <p>
-        Mapa de exemplo: <b>Overpass</b>
+        Mapa de exemplo: <b>{exampleMap}</b>
       </p>
 
-      <ReactCompareImage
-        leftImage="/src/assets/images/overpass-back-long-s2.jpg"
-        rightImage="/src/assets/images/overpass_back_long_s1.jpg"
-      />
+      <CompareImageWrapper>
+        <ReactCompareImage
+          leftImage={`/src/assets/images/${leftImageName}.jpg`}
+          rightImage={`/src/assets/images/${rightImageName}.jpg`}
+        />
+
+        <ImageLabel left>CS2</ImageLabel>
+        <ImageLabel>CS:GO</ImageLabel>
+      </CompareImageWrapper>
     </Container>
   );
 };
