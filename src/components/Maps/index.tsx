@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Container, Content, Description, HeaderText } from "./styles";
+import {
+  Container,
+  Content,
+  Description,
+  HeaderText,
+  SubSectionText,
+} from "./styles";
 import MainVideo from "../MainVideo";
 import CompareSlider from "../CompareSlider";
 
@@ -47,6 +53,20 @@ const Maps: React.FC = () => {
             leftImageName="dust2_back_plat_s2"
             rightImageName="dust2_back_plat_s1"
           />
+
+          <SubSectionText>Ferramentas da Source 2</SubSectionText>
+
+          <p>
+            As ferramentas e recursos de renderização da Source 2 estarão
+            disponíveis aos criadores de mapas comunitários para facilitar o
+            desenvolvimento, experimentação e iteração. Além disso, as
+            ferramentas da Oficina de Itens da Source 2 serão lançadas durante o
+            teste limitado.
+          </p>
+
+          <video width="77%" autoPlay muted loop preload="auto">
+            <source src="/src/assets/videos/map_s2tools.mp4" type="video/mp4" />
+          </video>
         </Description>
       </Content>
     </Container>

@@ -50,6 +50,13 @@ export const Description = styled.div`
     text-align: justify;
     font-size: 22px;
   }
+
+  > video {
+    margin: 65px 0;
+    outline: none;
+    overflow: hidden;
+    clip-path: inset(1.5px 1.5px);
+  }
 `;
 
 export const HeaderText = styled.h2`
@@ -58,4 +65,12 @@ export const HeaderText = styled.h2`
   font-size: 64px;
   font-weight: 700;
   text-transform: uppercase;
+`;
+
+export const SubSectionText = styled.h4`
+  margin-bottom: 10px;
+  margin-top: 50px;
+
+  font-size: 26px;
+  font-weight: 700;
 `;
