@@ -7,6 +7,7 @@ import Intro from "../Intro";
 import Smokes from "../Smokes";
 import Ticks from "../Ticks";
 import Maps from "../Maps";
+import Inventory from "../Inventory";
 
 const Layout: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Layout: React.FC = () => {
       <Smokes />
       <Ticks />
       <Maps />
+      <Inventory />
     </Container>
   );
 };
