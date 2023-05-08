@@ -8,6 +8,7 @@ import Smokes from "../Smokes";
 import Ticks from "../Ticks";
 import Maps from "../Maps";
 import Inventory from "../Inventory";
+import VisualEffects from "../VisualEffects";
 
 const Layout: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Layout: React.FC = () => {
       <Ticks />
       <Maps />
       <Inventory />
+      <VisualEffects />
     </Container>
   );
 };

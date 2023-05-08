@@ -18,13 +18,11 @@ const VideoRow: React.FC<VideoRowProps> = ({
   return (
     <Container reverse={reverse}>
       <video
-        width="550"
-        height="437"
         autoPlay
         muted
         loop
         preload="auto"
-        style={{ padding: "50px" }}
+        style={{ padding: "50px", width: "58%" }}
       >
         <source src={`/src/assets/videos/${videoName}.mp4`} type="video/mp4" />
       </video>
