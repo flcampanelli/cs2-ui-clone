@@ -10,6 +10,7 @@ import Maps from "../Maps";
 import Inventory from "../Inventory";
 import VisualEffects from "../VisualEffects";
 import Audio from "../Audio";
+import ComingSoon from "../ComingSoon";
 
 const Layout: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const Layout: React.FC = () => {
       <Inventory />
       <VisualEffects />
       <Audio />
+      <ComingSoon />
     </Container>
   );
 };
