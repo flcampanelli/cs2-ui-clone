@@ -11,6 +11,7 @@ import Inventory from "../Inventory";
 import VisualEffects from "../VisualEffects";
 import Audio from "../Audio";
 import ComingSoon from "../ComingSoon";
+import RootFooter from "../RootFooter";
 
 const Layout: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const Layout: React.FC = () => {
       <VisualEffects />
       <Audio />
       <ComingSoon />
+      <RootFooter />
     </Container>
   );
 };
