@@ -17,16 +17,6 @@ interface MainVideoProps {
 const MainVideo: React.FC<MainVideoProps> = ({ title, videoName }) => {
   return (
     <Container>
-      {/* <iframe
-          width="100%"
-          height="620"
-          style={{ border: 0 }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          title="Counter-Strike 2: Responsive Smokes"
-          src="https://www.youtube.com/embed/_y9MpNcAitQ?autoplay=0&amp;showinfo=0&amp;autohide=1&amp;fs=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1&amp;iv_load_policy=3&amp;controls=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.counter-strike.net&amp;widgetid=1"
-          id="widget2"
-        ></iframe> */}
-
       <VideoContainer>
         <video width="100%" height="100%" autoPlay muted loop preload="auto">
           <source

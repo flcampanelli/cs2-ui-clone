@@ -3,8 +3,6 @@ import React from "react";
 import { Container, Content, Description, HeaderText } from "./styles";
 import MainVideo from "../MainVideo";
 
-// bg-color, width, subtitle?
-
 const Ticks: React.FC = () => {
   return (
     <Container>
