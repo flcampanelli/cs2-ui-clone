@@ -1,26 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  min-height: 1300px;
-  background-image: url("/src/assets/images/bg-dark-blue.svg");
-  background-size: cover;
-`;
-
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-`;
-
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
