@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Description, HeaderText } from "./styles";
 import ContentBox from "../ContentBox";
 import MainVideo from "../MainVideo";
+
+import { Description, HeaderText } from "./styles";
 
 const Ticks: React.FC = () => {
   return (

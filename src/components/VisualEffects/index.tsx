@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Description, HeaderText } from "./styles";
 import VideoRow from "../VideoRow";
 import ContentBox from "../ContentBox";
+
+import { Description, HeaderText } from "./styles";
 
 const VisualEffects: React.FC = () => {
   return (

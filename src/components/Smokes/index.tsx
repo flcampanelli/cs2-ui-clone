@@ -1,9 +1,10 @@
 import React from "react";
 
-import { HeaderText, Description } from "./styles";
 import VideoRow from "../VideoRow";
 import MainVideo from "../MainVideo";
 import ContentBox from "../ContentBox";
+
+import { HeaderText, Description } from "./styles";
 
 const Smokes: React.FC = () => {
   return (

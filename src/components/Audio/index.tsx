@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Description, HeaderText } from "./styles";
 import ContentBox from "../ContentBox";
+
+import { Description, HeaderText } from "./styles";
 
 const Audio: React.FC = () => {
   return (

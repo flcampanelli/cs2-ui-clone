@@ -1,9 +1,10 @@
 import React from "react";
 
-import { Description, HeaderText, SubSectionText } from "./styles";
 import MainVideo from "../MainVideo";
 import CompareSlider from "../CompareSlider";
 import ContentBox from "../ContentBox";
+
+import { Description, HeaderText, SubSectionText } from "./styles";
 
 const Maps: React.FC = () => {
   return (
