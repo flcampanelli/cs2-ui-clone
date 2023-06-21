@@ -14,6 +14,7 @@ import {
 const Maps: React.FC = () => {
   //const overpassImage = "overpass_back_long_s";
   const [overpassImage, setOverpassImage] = useState("overpass_back_long_s");
+  const [nukeImage, setNukeImage] = useState("nuke_default_s");
 
   const changeOverpassArea = (area: string) => {
     switch (area) {
@@ -28,6 +29,22 @@ const Maps: React.FC = () => {
         break;
       default:
         setOverpassImage("overpass_back_long_s");
+    }
+  };
+
+  const changeNukeArea = (area: string) => {
+    switch (area) {
+      case "ramp":
+        setNukeImage("nuke_ramp_s");
+        break;
+      case "tBase":
+        setNukeImage("nuke_t_s");
+        break;
+      case "backhall":
+        setNukeImage("nuke_backhall_s");
+        break;
+      default:
+        setNukeImage("nuke_default_s");
     }
   };
 
@@ -74,9 +91,18 @@ const Maps: React.FC = () => {
               um sistema de renderização baseada na física que produz materiais, luzes e 
               reflexos realísticos."
           exampleMap="NUKE"
-          leftImageName="nuke_default_s2"
-          rightImageName="nuke_default_s1"
-        />
+          leftImageName={`${nukeImage}2`}
+          rightImageName={`${nukeImage}1`}
+        >
+          <ButtonContainer>
+            <button onClick={() => changeNukeArea("bombA")}>
+              Alvo de explosão A
+            </button>
+            <button onClick={() => changeNukeArea("ramp")}>Rampa</button>
+            <button onClick={() => changeNukeArea("tBase")}>Base dos Ts</button>
+            <button onClick={() => changeNukeArea("backhall")}>Túneis</button>
+          </ButtonContainer>
+        </CompareSlider>
 
         <CompareSlider
           headerText="Pratas da casa"
