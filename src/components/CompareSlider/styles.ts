@@ -42,6 +42,9 @@ export const Header = styled.h3`
 `;
 
 export const CompareImageWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  max-height: 495px;
   position: relative;
 `;
 

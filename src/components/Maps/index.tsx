@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 
 import MainVideo from "../MainVideo";
 import CompareSlider from "../CompareSlider";
 import ContentBox from "../ContentBox";
 
-import { Description, HeaderText, SubSectionText } from "./styles";
+import {
+  Description,
+  HeaderText,
+  SubSectionText,
+  ButtonContainer,
+} from "./styles";
 
 const Maps: React.FC = () => {
+  //const overpassImage = "overpass_back_long_s";
+  const [overpassImage, setOverpassImage] = useState("overpass_back_long_s");
+
+  const changeOverpassArea = (area: string) => {
+    switch (area) {
+      case "tunnel":
+        setOverpassImage("overpass_lower_tunnel_s");
+        break;
+      case "toilet":
+        setOverpassImage("overpass_toilets_s");
+        break;
+      case "bombA":
+        setOverpassImage("overpass_van_vista_s");
+        break;
+      default:
+        setOverpassImage("overpass_back_long_s");
+    }
+  };
+
   return (
     <ContentBox
       contentMinHeight={"4460px"}
@@ -27,9 +51,22 @@ const Maps: React.FC = () => {
           bodyText="Os mapas reformulados foram refeitos do zero, aproveitando todas as
               novas ferramentas e recursos de renderização da Source 2."
           exampleMap="Overpass"
-          leftImageName="overpass-back-long-s2"
-          rightImageName="overpass_back_long_s1"
-        />
+          leftImageName={`${overpassImage}2`}
+          rightImageName={`${overpassImage}1`}
+        >
+          <ButtonContainer>
+            <button onClick={() => changeOverpassArea("long")}>Fundo</button>
+            <button onClick={() => changeOverpassArea("tunnel")}>
+              Túnel inferior
+            </button>
+            <button onClick={() => changeOverpassArea("toilet")}>
+              Banheiro
+            </button>
+            <button onClick={() => changeOverpassArea("bombA")}>
+              Alvo de explosão A
+            </button>
+          </ButtonContainer>
+        </CompareSlider>
 
         <CompareSlider
           headerText="Mapas aprimorados"

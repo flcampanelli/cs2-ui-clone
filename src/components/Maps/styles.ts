@@ -53,3 +53,29 @@ export const SubSectionText = styled.h4`
   font-size: 26px;
   font-weight: 700;
 `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 75px;
+  margin-top: 18px;
+
+  > button {
+    font-size: 15px;
+    font-weight: 500;
+    /* letter-spacing: 2px; */
+    color: #fff;
+    text-transform: uppercase;
+
+    border: none;
+    /* background: #111; */
+    background: transparent;
+    color: #111;
+    padding: 4px 15px;
+  }
+
+  > button:hover {
+    cursor: pointer;
+  }
+`;

@@ -1,7 +1,13 @@
 import React from "react";
 import ReactCompareImage from "react-compare-image";
 
-import { Container, Header, CompareImageWrapper, ImageLabel } from "./styles";
+import {
+  Container,
+  Header,
+  CompareImageWrapper,
+  ImageLabel,
+  ButtonContainer,
+} from "./styles";
 
 interface CompareSliderProps {
   headerText: string;
@@ -9,6 +15,7 @@ interface CompareSliderProps {
   exampleMap: string;
   leftImageName: string;
   rightImageName: string;
+  children: JSX.Element | JSX.Element[];
 }
 
 const CompareSlider: React.FC<CompareSliderProps> = ({
@@ -17,6 +24,7 @@ const CompareSlider: React.FC<CompareSliderProps> = ({
   exampleMap,
   leftImageName,
   rightImageName,
+  children,
 }) => {
   return (
     <Container>
@@ -37,6 +45,8 @@ const CompareSlider: React.FC<CompareSliderProps> = ({
         <ImageLabel left>CS2</ImageLabel>
         <ImageLabel>CS:GO</ImageLabel>
       </CompareImageWrapper>
+
+      {children}
     </Container>
   );
 };
