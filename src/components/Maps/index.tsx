@@ -12,9 +12,9 @@ import {
 } from "./styles";
 
 const Maps: React.FC = () => {
-  //const overpassImage = "overpass_back_long_s";
   const [overpassImage, setOverpassImage] = useState("overpass_back_long_s");
   const [nukeImage, setNukeImage] = useState("nuke_default_s");
+  const [dustImage, setDustImage] = useState("nuke_default_s");
 
   const changeOverpassArea = (area: string) => {
     switch (area) {
@@ -45,6 +45,19 @@ const Maps: React.FC = () => {
         break;
       default:
         setNukeImage("nuke_default_s");
+    }
+  };
+
+  const changeDustArea = (area: string) => {
+    switch (area) {
+      case "blue":
+        setDustImage("dust2_blue_s");
+        break;
+      case "ramp":
+        setDustImage("dust2_ct_ramp_s");
+        break;
+      default:
+        setDustImage("dust2_back_plat_s");
     }
   };
 
@@ -111,9 +124,20 @@ const Maps: React.FC = () => {
               aprimorados com melhor iluminação e legibilidade, mas não mudaram além 
               disso."
           exampleMap="Dust II"
-          leftImageName="dust2_back_plat_s2"
-          rightImageName="dust2_back_plat_s1"
-        />
+          leftImageName={`${dustImage}2`}
+          rightImageName={`${dustImage}1`}
+        >
+          <ButtonContainer>
+            <button onClick={() => changeDustArea("backPlat")}>
+              Fundo do altar
+            </button>
+            <button onClick={() => changeDustArea("blue")}>Casinha</button>
+            <button onClick={() => changeDustArea("ramp")}>Base dos CTs</button>
+            <button onClick={() => changeDustArea("backhall")}>
+              Portas do meio
+            </button>
+          </ButtonContainer>
+        </CompareSlider>
 
         <SubSectionText>Ferramentas da Source 2</SubSectionText>
 
