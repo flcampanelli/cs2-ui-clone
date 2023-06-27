@@ -6,7 +6,6 @@ interface ImageLabelProps {
 
 export const Container = styled.div`
   width: 900px;
-  height: 785px;
   padding: 40px;
   margin: 20px 0px;
   background-color: rgba(0, 0, 0, 0.12);
@@ -43,7 +42,7 @@ export const Header = styled.h3`
 
 export const CompareImageWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: 820px;
   max-height: 495px;
   position: relative;
 `;

@@ -1,13 +1,7 @@
 import React from "react";
 import ReactCompareImage from "react-compare-image";
 
-import {
-  Container,
-  Header,
-  CompareImageWrapper,
-  ImageLabel,
-  ButtonContainer,
-} from "./styles";
+import { Container, Header, CompareImageWrapper, ImageLabel } from "./styles";
 
 interface CompareSliderProps {
   headerText: string;

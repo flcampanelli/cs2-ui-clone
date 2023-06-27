@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ButtonProps {
+  selectedDustMapArea?: boolean;
+}
+
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
@@ -60,22 +64,28 @@ export const ButtonContainer = styled.div`
 
   padding: 0 75px;
   margin-top: 18px;
+`;
 
-  > button {
-    font-size: 15px;
-    font-weight: 500;
-    /* letter-spacing: 2px; */
-    color: #fff;
-    text-transform: uppercase;
+export const Button = styled.button<ButtonProps>`
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
 
-    border: none;
-    /* background: #111; */
-    background: transparent;
-    color: #111;
-    padding: 4px 15px;
+  background: transparent;
+
+  border: none;
+  padding: 4px 15px;
+
+  /* color: ${(props) => (props.selectedDustMapArea ? "#fff" : "black")}; */
+  /* background: ${(props) =>
+    props.selectedDustMapArea ? "#111" : "transparent"}; */
+
+  &:hover {
+    cursor: pointer;
   }
 
-  > button:hover {
-    cursor: pointer;
+  &.selected {
+    color: #fff;
+    background: #111;
   }
 `;

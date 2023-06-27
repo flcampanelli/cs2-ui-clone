@@ -9,25 +9,32 @@ import {
   HeaderText,
   SubSectionText,
   ButtonContainer,
+  Button,
 } from "./styles";
 
 const Maps: React.FC = () => {
   const [overpassImage, setOverpassImage] = useState("overpass_back_long_s");
   const [nukeImage, setNukeImage] = useState("nuke_default_s");
-  const [dustImage, setDustImage] = useState("nuke_default_s");
+  const [dustImage, setDustImage] = useState("dust2_back_plat_s");
+
+  const [selectedDustMapArea, setSelectedDustMapArea] = useState("long");
 
   const changeOverpassArea = (area: string) => {
     switch (area) {
       case "tunnel":
+        setSelectedDustMapArea(`${area}`);
         setOverpassImage("overpass_lower_tunnel_s");
         break;
       case "toilet":
+        setSelectedDustMapArea(`${area}`);
         setOverpassImage("overpass_toilets_s");
         break;
       case "bombA":
+        setSelectedDustMapArea(`${area}`);
         setOverpassImage("overpass_van_vista_s");
         break;
       default:
+        setSelectedDustMapArea(`${area}`);
         setOverpassImage("overpass_back_long_s");
     }
   };
@@ -85,16 +92,30 @@ const Maps: React.FC = () => {
           rightImageName={`${overpassImage}1`}
         >
           <ButtonContainer>
-            <button onClick={() => changeOverpassArea("long")}>Fundo</button>
-            <button onClick={() => changeOverpassArea("tunnel")}>
+            <Button
+              onClick={() => changeOverpassArea("long")}
+              className={selectedDustMapArea === "long" ? "selected" : ""}
+            >
+              Fundo
+            </Button>
+            <Button
+              onClick={() => changeOverpassArea("tunnel")}
+              className={selectedDustMapArea === "tunnel" ? "selected" : ""}
+            >
               Túnel inferior
-            </button>
-            <button onClick={() => changeOverpassArea("toilet")}>
+            </Button>
+            <Button
+              onClick={() => changeOverpassArea("toilet")}
+              className={selectedDustMapArea === "toilet" ? "selected" : ""}
+            >
               Banheiro
-            </button>
-            <button onClick={() => changeOverpassArea("bombA")}>
+            </Button>
+            <Button
+              onClick={() => changeOverpassArea("bombA")}
+              className={selectedDustMapArea === "bombA" ? "selected" : ""}
+            >
               Alvo de explosão A
-            </button>
+            </Button>
           </ButtonContainer>
         </CompareSlider>
 
@@ -108,12 +129,12 @@ const Maps: React.FC = () => {
           rightImageName={`${nukeImage}1`}
         >
           <ButtonContainer>
-            <button onClick={() => changeNukeArea("bombA")}>
+            <Button onClick={() => changeNukeArea("bombA")}>
               Alvo de explosão A
-            </button>
-            <button onClick={() => changeNukeArea("ramp")}>Rampa</button>
-            <button onClick={() => changeNukeArea("tBase")}>Base dos Ts</button>
-            <button onClick={() => changeNukeArea("backhall")}>Túneis</button>
+            </Button>
+            <Button onClick={() => changeNukeArea("ramp")}>Rampa</Button>
+            <Button onClick={() => changeNukeArea("tBase")}>Base dos Ts</Button>
+            <Button onClick={() => changeNukeArea("backhall")}>Túneis</Button>
           </ButtonContainer>
         </CompareSlider>
 
@@ -128,14 +149,14 @@ const Maps: React.FC = () => {
           rightImageName={`${dustImage}1`}
         >
           <ButtonContainer>
-            <button onClick={() => changeDustArea("backPlat")}>
+            <Button onClick={() => changeDustArea("backPlat")}>
               Fundo do altar
-            </button>
-            <button onClick={() => changeDustArea("blue")}>Casinha</button>
-            <button onClick={() => changeDustArea("ramp")}>Base dos CTs</button>
-            <button onClick={() => changeDustArea("backhall")}>
+            </Button>
+            <Button onClick={() => changeDustArea("blue")}>Casinha</Button>
+            <Button onClick={() => changeDustArea("ramp")}>Base dos CTs</Button>
+            <Button onClick={() => changeDustArea("backhall")}>
               Portas do meio
-            </button>
+            </Button>
           </ButtonContainer>
         </CompareSlider>
 
