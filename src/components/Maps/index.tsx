@@ -17,24 +17,26 @@ const Maps: React.FC = () => {
   const [nukeImage, setNukeImage] = useState("nuke_default_s");
   const [dustImage, setDustImage] = useState("dust2_back_plat_s");
 
-  const [selectedDustMapArea, setSelectedDustMapArea] = useState("long");
+  const [selectedOverpassMapArea, setSelectedOverpassMapArea] =
+    useState("long");
+  const [selectedNukeMapArea, setSelectedNukeMapArea] = useState("bombA");
 
   const changeOverpassArea = (area: string) => {
     switch (area) {
       case "tunnel":
-        setSelectedDustMapArea(`${area}`);
+        setSelectedOverpassMapArea(`${area}`);
         setOverpassImage("overpass_lower_tunnel_s");
         break;
       case "toilet":
-        setSelectedDustMapArea(`${area}`);
+        setSelectedOverpassMapArea(`${area}`);
         setOverpassImage("overpass_toilets_s");
         break;
       case "bombA":
-        setSelectedDustMapArea(`${area}`);
+        setSelectedOverpassMapArea(`${area}`);
         setOverpassImage("overpass_van_vista_s");
         break;
       default:
-        setSelectedDustMapArea(`${area}`);
+        setSelectedOverpassMapArea(`${area}`);
         setOverpassImage("overpass_back_long_s");
     }
   };
@@ -42,15 +44,19 @@ const Maps: React.FC = () => {
   const changeNukeArea = (area: string) => {
     switch (area) {
       case "ramp":
+        setSelectedNukeMapArea(`${area}`);
         setNukeImage("nuke_ramp_s");
         break;
       case "tBase":
+        setSelectedNukeMapArea(`${area}`);
         setNukeImage("nuke_t_s");
         break;
       case "backhall":
+        setSelectedNukeMapArea(`${area}`);
         setNukeImage("nuke_backhall_s");
         break;
       default:
+        setSelectedNukeMapArea(`${area}`);
         setNukeImage("nuke_default_s");
     }
   };
@@ -94,25 +100,25 @@ const Maps: React.FC = () => {
           <ButtonContainer>
             <Button
               onClick={() => changeOverpassArea("long")}
-              className={selectedDustMapArea === "long" ? "selected" : ""}
+              className={selectedOverpassMapArea === "long" ? "selected" : ""}
             >
               Fundo
             </Button>
             <Button
               onClick={() => changeOverpassArea("tunnel")}
-              className={selectedDustMapArea === "tunnel" ? "selected" : ""}
+              className={selectedOverpassMapArea === "tunnel" ? "selected" : ""}
             >
               Túnel inferior
             </Button>
             <Button
               onClick={() => changeOverpassArea("toilet")}
-              className={selectedDustMapArea === "toilet" ? "selected" : ""}
+              className={selectedOverpassMapArea === "toilet" ? "selected" : ""}
             >
               Banheiro
             </Button>
             <Button
               onClick={() => changeOverpassArea("bombA")}
-              className={selectedDustMapArea === "bombA" ? "selected" : ""}
+              className={selectedOverpassMapArea === "bombA" ? "selected" : ""}
             >
               Alvo de explosão A
             </Button>
@@ -129,12 +135,30 @@ const Maps: React.FC = () => {
           rightImageName={`${nukeImage}1`}
         >
           <ButtonContainer>
-            <Button onClick={() => changeNukeArea("bombA")}>
+            <Button
+              onClick={() => changeNukeArea("bombA")}
+              className={selectedNukeMapArea === "bombA" ? "selected" : ""}
+            >
               Alvo de explosão A
             </Button>
-            <Button onClick={() => changeNukeArea("ramp")}>Rampa</Button>
-            <Button onClick={() => changeNukeArea("tBase")}>Base dos Ts</Button>
-            <Button onClick={() => changeNukeArea("backhall")}>Túneis</Button>
+            <Button
+              onClick={() => changeNukeArea("ramp")}
+              className={selectedNukeMapArea === "ramp" ? "selected" : ""}
+            >
+              Rampa
+            </Button>
+            <Button
+              onClick={() => changeNukeArea("tBase")}
+              className={selectedNukeMapArea === "tBase" ? "selected" : ""}
+            >
+              Base dos Ts
+            </Button>
+            <Button
+              onClick={() => changeNukeArea("backhall")}
+              className={selectedNukeMapArea === "backhall" ? "selected" : ""}
+            >
+              Túneis
+            </Button>
           </ButtonContainer>
         </CompareSlider>
 
