@@ -20,6 +20,7 @@ const Maps: React.FC = () => {
   const [selectedOverpassMapArea, setSelectedOverpassMapArea] =
     useState("long");
   const [selectedNukeMapArea, setSelectedNukeMapArea] = useState("bombA");
+  const [selectedDustMapArea, setSelectedDustMapArea] = useState("backPlat");
 
   const changeOverpassArea = (area: string) => {
     switch (area) {
@@ -64,12 +65,19 @@ const Maps: React.FC = () => {
   const changeDustArea = (area: string) => {
     switch (area) {
       case "blue":
+        setSelectedDustMapArea(`${area}`);
         setDustImage("dust2_blue_s");
         break;
       case "ramp":
+        setSelectedDustMapArea(`${area}`);
         setDustImage("dust2_ct_ramp_s");
         break;
+      case "doubleDoors":
+        setSelectedDustMapArea(`${area}`);
+        setDustImage("dust2_double_doors_s");
+        break;
       default:
+        setSelectedDustMapArea(`${area}`);
         setDustImage("dust2_back_plat_s");
     }
   };
@@ -173,12 +181,30 @@ const Maps: React.FC = () => {
           rightImageName={`${dustImage}1`}
         >
           <ButtonContainer>
-            <Button onClick={() => changeDustArea("backPlat")}>
+            <Button
+              onClick={() => changeDustArea("backPlat")}
+              className={selectedDustMapArea === "backPlat" ? "selected" : ""}
+            >
               Fundo do altar
             </Button>
-            <Button onClick={() => changeDustArea("blue")}>Casinha</Button>
-            <Button onClick={() => changeDustArea("ramp")}>Base dos CTs</Button>
-            <Button onClick={() => changeDustArea("backhall")}>
+            <Button
+              onClick={() => changeDustArea("blue")}
+              className={selectedDustMapArea === "blue" ? "selected" : ""}
+            >
+              Casinha
+            </Button>
+            <Button
+              onClick={() => changeDustArea("ramp")}
+              className={selectedDustMapArea === "ramp" ? "selected" : ""}
+            >
+              Base dos CTs
+            </Button>
+            <Button
+              onClick={() => changeDustArea("doubleDoors")}
+              className={
+                selectedDustMapArea === "doubleDoors" ? "selected" : ""
+              }
+            >
               Portas do meio
             </Button>
           </ButtonContainer>
