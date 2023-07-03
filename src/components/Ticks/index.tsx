@@ -3,14 +3,11 @@ import React from "react";
 import ContentBox from "../ContentBox";
 import MainVideo from "../MainVideo";
 
-import { Description, HeaderText } from "./styles";
+import { Description, HeaderText, bgOrange } from "./styles";
 
 const Ticks: React.FC = () => {
   return (
-    <ContentBox
-      contentMinHeight={"1445px"}
-      backgroundImage={"/src/assets/images/bg-orange.svg"}
-    >
+    <ContentBox contentMinHeight={"1445px"} backgroundImage={bgOrange}>
       <MainVideo title="Indo além dos tiques" videoName="video_ticks" />
 
       <Description>

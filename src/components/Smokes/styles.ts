@@ -21,6 +21,11 @@ import styled from "styled-components";
 //   margin: 0 auto;
 // `;
 
+export const bgGray = new URL(
+  "../../assets/images/bg-gray.svg",
+  import.meta.url
+).href;
+
 export const Description = styled.div`
   display: flex;
   flex-direction: column;

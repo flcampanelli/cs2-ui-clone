@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const playButton = new URL(
+  "../../assets/icons/play-button.svg",
+  import.meta.url
+).href;
+
 export const Container = styled.div``;
 
 export const VideoContainer = styled.div`

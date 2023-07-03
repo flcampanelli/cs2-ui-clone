@@ -15,6 +15,11 @@ const VideoRow: React.FC<VideoRowProps> = ({
   videoName,
   reverse,
 }) => {
+  function getVideoUrl(videoName: string) {
+    return new URL(`../../assets/videos/${videoName}.mp4`, import.meta.url)
+      .href;
+  }
+
   return (
     <Container reverse={reverse}>
       <video
@@ -24,7 +29,7 @@ const VideoRow: React.FC<VideoRowProps> = ({
         preload="auto"
         style={{ padding: "50px", width: "58%" }}
       >
-        <source src={`/src/assets/videos/${videoName}.mp4`} type="video/mp4" />
+        <source src={getVideoUrl(videoName)} type="video/mp4" />
       </video>
 
       <SubIntro>

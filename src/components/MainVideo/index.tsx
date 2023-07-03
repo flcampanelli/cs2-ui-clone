@@ -7,6 +7,7 @@ import {
   VideoSubHeaderText,
   VideoHeaderText,
   PlayButton,
+  playButton,
 } from "./styles";
 
 interface MainVideoProps {
@@ -15,14 +16,16 @@ interface MainVideoProps {
 }
 
 const MainVideo: React.FC<MainVideoProps> = ({ title, videoName }) => {
+  function getVideoUrl(videoName: string) {
+    return new URL(`../../assets/videos/${videoName}.mp4`, import.meta.url)
+      .href;
+  }
+
   return (
     <Container>
       <VideoContainer>
         <video width="100%" height="100%" autoPlay muted loop preload="auto">
-          <source
-            src={`/src/assets/videos/${videoName}.mp4`}
-            type="video/mp4"
-          />
+          <source src={getVideoUrl(videoName)} type="video/mp4" />
         </video>
 
         <Overlay>
@@ -35,10 +38,7 @@ const MainVideo: React.FC<MainVideoProps> = ({ title, videoName }) => {
           </VideoHeaderText>
 
           <PlayButton>
-            <img
-              src="/src/assets/icons/play-button.svg"
-              alt="play video icon"
-            />
+            <img src={playButton} alt="play video icon" />
 
             <h3>Reproduzir vídeo</h3>
           </PlayButton>

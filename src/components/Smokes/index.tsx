@@ -4,14 +4,11 @@ import VideoRow from "../VideoRow";
 import MainVideo from "../MainVideo";
 import ContentBox from "../ContentBox";
 
-import { HeaderText, Description } from "./styles";
+import { HeaderText, Description, bgGray } from "./styles";
 
 const Smokes: React.FC = () => {
   return (
-    <ContentBox
-      contentMinHeight={"2485px"}
-      backgroundImage={"/src/assets/images/bg-gray.svg"}
-    >
+    <ContentBox contentMinHeight={"2485px"} backgroundImage={bgGray}>
       <MainVideo title="Fumaças Interativas" videoName="video_smokes" />
 
       <Description>

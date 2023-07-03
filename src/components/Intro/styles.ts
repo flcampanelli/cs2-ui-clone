@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+const bgDarkBlue = new URL(
+  "../../assets/images/bg-dark-blue.svg",
+  import.meta.url
+).href;
+
 export const Container = styled.section`
   display: flex;
   justify-content: center;
@@ -7,7 +12,7 @@ export const Container = styled.section`
 
   width: 100%;
   min-height: 938px;
-  background-image: url("/src/assets/images/bg-dark-blue.svg");
+  background-image: url(${bgDarkBlue});
   background-size: cover;
   /* background-position: center; */
 `;

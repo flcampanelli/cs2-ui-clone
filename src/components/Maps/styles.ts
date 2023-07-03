@@ -1,91 +1,96 @@
-import styled from "styled-components";
+// import styled from "styled-components";
 
-interface ButtonProps {
-  selectedDustMapArea?: boolean;
-}
+// export const bgGray = new URL(
+//   "../../assets/images/bg-gray.svg",
+//   import.meta.url
+// ).href;
 
-export const Description = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+// interface ButtonProps {
+//   selectedDustMapArea?: boolean;
+// }
 
-  width: 100%;
-  padding-bottom: 100px;
-  background-color: #eee;
+// export const Description = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
 
-  color: #111;
+//   width: 100%;
+//   padding-bottom: 100px;
+//   background-color: #eee;
 
-  & > h3 {
-    max-width: 750px;
+//   color: #111;
 
-    margin-bottom: 30px;
+//   & > h3 {
+//     max-width: 750px;
 
-    text-align: center;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 100%;
-  }
+//     margin-bottom: 30px;
 
-  & > p {
-    max-width: 650px;
+//     text-align: center;
+//     font-size: 26px;
+//     font-weight: 600;
+//     line-height: 100%;
+//   }
 
-    text-align: justify;
-    font-size: 22px;
-  }
+//   & > p {
+//     max-width: 650px;
 
-  > video {
-    margin: 65px 0;
-    outline: none;
-    overflow: hidden;
-    clip-path: inset(1.5px 1.5px);
-  }
-`;
+//     text-align: justify;
+//     font-size: 22px;
+//   }
 
-export const HeaderText = styled.h2`
-  margin: 60px auto 0 auto;
+//   > video {
+//     margin: 65px 0;
+//     outline: none;
+//     overflow: hidden;
+//     clip-path: inset(1.5px 1.5px);
+//   }
+// `;
 
-  font-size: 64px;
-  font-weight: 700;
-  text-transform: uppercase;
-`;
+// export const HeaderText = styled.h2`
+//   margin: 60px auto 0 auto;
 
-export const SubSectionText = styled.h4`
-  margin-bottom: 10px;
-  margin-top: 50px;
+//   font-size: 64px;
+//   font-weight: 700;
+//   text-transform: uppercase;
+// `;
 
-  font-size: 26px;
-  font-weight: 700;
-`;
+// export const SubSectionText = styled.h4`
+//   margin-bottom: 10px;
+//   margin-top: 50px;
 
-export const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
+//   font-size: 26px;
+//   font-weight: 700;
+// `;
 
-  padding: 0 75px;
-  margin-top: 18px;
-`;
+// export const ButtonContainer = styled.div`
+//   display: flex;
+//   justify-content: space-between;
 
-export const Button = styled.button<ButtonProps>`
-  font-size: 15px;
-  font-weight: 500;
-  text-transform: uppercase;
+//   padding: 0 75px;
+//   margin-top: 18px;
+// `;
 
-  background: transparent;
+// export const Button = styled.button<ButtonProps>`
+//   font-size: 15px;
+//   font-weight: 500;
+//   text-transform: uppercase;
 
-  border: none;
-  padding: 4px 15px;
+//   background: transparent;
 
-  /* color: ${(props) => (props.selectedDustMapArea ? "#fff" : "black")}; */
-  /* background: ${(props) =>
-    props.selectedDustMapArea ? "#111" : "transparent"}; */
+//   border: none;
+//   padding: 4px 15px;
 
-  &:hover {
-    cursor: pointer;
-  }
+//   /* color: ${(props) => (props.selectedDustMapArea ? "#fff" : "black")}; */
+//   /* background: ${(props) =>
+//     props.selectedDustMapArea ? "#111" : "transparent"}; */
 
-  &.selected {
-    color: #fff;
-    background: #111;
-  }
-`;
+//   &:hover {
+//     cursor: pointer;
+//   }
+
+//   &.selected {
+//     color: #fff;
+//     background: #111;
+//   }
+// `;

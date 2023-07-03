@@ -1,7 +1,27 @@
 import styled from "styled-components";
 
+export const logoCsFullBlack = new URL(
+  "../../assets/images/logo-cs-full-blk.svg",
+  import.meta.url
+).href;
+
+export const headerCtt = new URL(
+  "../../assets/images/header-ctt.png",
+  import.meta.url
+).href;
+
+export const logoCsHeader = new URL(
+  "../../assets/images/logo-cs2-header.svg",
+  import.meta.url
+).href;
+
+const cs2HeaderBg = new URL(
+  "../../assets/images/cs2-header-bg.svg",
+  import.meta.url
+).href;
+
 export const Container = styled.div`
-  background-image: url("/src/assets/images/cs2-header-bg.svg");
+  background-image: url(${cs2HeaderBg});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

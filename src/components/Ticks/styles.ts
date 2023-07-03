@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const bgOrange = new URL(
+  "../../assets/images/bg-orange.svg",
+  import.meta.url
+).href;
+
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
