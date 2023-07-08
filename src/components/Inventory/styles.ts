@@ -1,37 +1,42 @@
-// import styled from "styled-components";
+import styled from "styled-components";
 
-// export const Description = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
+export const weapons = new URL(
+  "../../assets/videos/weapons.mp4",
+  import.meta.url
+).href;
 
-//   width: 100%;
-//   padding-bottom: 100px;
-//   background-color: #5a5f76;
+export const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-//   > p {
-//     max-width: 650px;
+  width: 100%;
+  padding-bottom: 100px;
+  background-color: #5a5f76;
 
-//     text-align: justify;
-//     font-size: 22.5px;
-//     line-height: 120%;
+  > p {
+    max-width: 650px;
 
-//     color: rgba(255, 255, 255, 0.94);
-//   }
+    text-align: justify;
+    font-size: 22.5px;
+    line-height: 120%;
 
-//   > video {
-//     margin: 30px 0px;
-//     padding: 40px 30px;
-//   }
-// `;
+    color: rgba(255, 255, 255, 0.94);
+  }
 
-// export const HeaderText = styled.h2`
-//   margin: 60px auto 0 auto;
+  > video {
+    margin: 30px 0px;
+    padding: 40px 30px;
+  }
+`;
 
-//   font-size: 64px;
-//   font-weight: 700;
-//   text-transform: uppercase;
+export const HeaderText = styled.h2`
+  margin: 60px auto 0 auto;
 
-//   color: rgba(255, 255, 255, 0.94);
-// `;
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.94);
+`;

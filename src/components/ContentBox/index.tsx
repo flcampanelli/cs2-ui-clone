@@ -13,9 +13,14 @@ const ContentBox: React.FC<ContentBoxProps> = ({
   contentMinHeight,
   backgroundImage,
 }) => {
+  function getImageUrl(imageName: string) {
+    return new URL(`../../assets/images/${imageName}.svg`, import.meta.url)
+      .href;
+  }
+
   return (
     <Container
-      backgroundImage={backgroundImage}
+      backgroundImage={getImageUrl(backgroundImage)}
       contentMinHeight={contentMinHeight}
     >
       <Content>{children}</Content>
