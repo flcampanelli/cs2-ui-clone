@@ -1,48 +1,53 @@
-// import React from "react";
-// import ReactCompareImage from "react-compare-image";
+import React from "react";
+import ReactCompareImage from "react-compare-image";
 
-// import { Container, Header, CompareImageWrapper, ImageLabel } from "./styles";
+import { Container, Header, CompareImageWrapper, ImageLabel } from "./styles";
 
-// interface CompareSliderProps {
-//   headerText: string;
-//   bodyText: string;
-//   exampleMap: string;
-//   leftImageName: string;
-//   rightImageName: string;
-//   children: JSX.Element | JSX.Element[];
-// }
+interface CompareSliderProps {
+  headerText: string;
+  bodyText: string;
+  exampleMap: string;
+  leftImageName: string;
+  rightImageName: string;
+  children: JSX.Element | JSX.Element[];
+}
 
-// const CompareSlider: React.FC<CompareSliderProps> = ({
-//   headerText,
-//   bodyText,
-//   exampleMap,
-//   leftImageName,
-//   rightImageName,
-//   children,
-// }) => {
-//   return (
-//     <Container>
-//       <Header>{headerText}</Header>
+const CompareSlider: React.FC<CompareSliderProps> = ({
+  headerText,
+  bodyText,
+  exampleMap,
+  leftImageName,
+  rightImageName,
+  children,
+}) => {
+  function getImageUrl(imageName: string) {
+    return new URL(`../../assets/images/${imageName}.jpg`, import.meta.url)
+      .href;
+  }
 
-//       <h4>{bodyText}</h4>
+  return (
+    <Container>
+      <Header>{headerText}</Header>
 
-//       <p>
-//         Mapa de exemplo: <b>{exampleMap}</b>
-//       </p>
+      <h4>{bodyText}</h4>
 
-//       <CompareImageWrapper>
-//         <ReactCompareImage
-//           leftImage={`/src/assets/images/${leftImageName}.jpg`}
-//           rightImage={`/src/assets/images/${rightImageName}.jpg`}
-//         />
+      <p>
+        Mapa de exemplo: <b>{exampleMap}</b>
+      </p>
 
-//         <ImageLabel left>CS2</ImageLabel>
-//         <ImageLabel>CS:GO</ImageLabel>
-//       </CompareImageWrapper>
+      <CompareImageWrapper>
+        <ReactCompareImage
+          leftImage={getImageUrl(leftImageName)}
+          rightImage={getImageUrl(rightImageName)}
+        />
 
-//       {children}
-//     </Container>
-//   );
-// };
+        <ImageLabel left>CS2</ImageLabel>
+        <ImageLabel>CS:GO</ImageLabel>
+      </CompareImageWrapper>
 
-// export default CompareSlider;
+      {children}
+    </Container>
+  );
+};
+
+export default CompareSlider;

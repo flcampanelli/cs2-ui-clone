@@ -4,7 +4,7 @@ import Header from "../Header";
 import Intro from "../Intro";
 import Smokes from "../Smokes";
 import Ticks from "../Ticks";
-// import Maps from "../Maps";
+import Maps from "../Maps";
 import Inventory from "../Inventory";
 import VisualEffects from "../VisualEffects";
 import Audio from "../Audio";
@@ -20,7 +20,7 @@ const Layout: React.FC = () => {
       <Intro />
       <Smokes />
       <Ticks />
-      {/* <Maps /> */}
+      <Maps />
       <Inventory />
       <VisualEffects />
       <Audio />
