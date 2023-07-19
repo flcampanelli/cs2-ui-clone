@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 
+import Cs2HeaderBg from "../../assets/images/cs2-header-bg.svg";
 import LogoCsFullBlk from "../../assets/images/logo-cs-full-blk.svg";
 import HeaderCtt from "../../assets/images/header-ctt.png";
-import logoCs2Header from "../../assets/images/logo-cs2-header.svg";
+import LogoCs2Header from "../../assets/images/logo-cs2-header.svg";
 
 import OverBackLongS2 from "../../assets/images/overpass_back_long_s2.jpg";
 import OverBackLongS1 from "../../assets/images/overpass_back_long_s1.jpg";
@@ -33,9 +34,10 @@ import Dust2DoubleDoorsS1 from "../../assets/images/dust2_double_doors_s1.jpg";
 
 const PreloadImages: React.FC = () => {
   const imageSources: string[] = [
+    Cs2HeaderBg,
     LogoCsFullBlk,
     HeaderCtt,
-    logoCs2Header,
+    LogoCs2Header,
 
     OverBackLongS2,
     OverBackLongS1,
@@ -45,6 +47,7 @@ const PreloadImages: React.FC = () => {
     OverToiletsS1,
     OverVanVistaS2,
     OverVanVistaS1,
+
     NukeDefaultS2,
     NukeDefaultS1,
     NukeRampS2,
@@ -53,6 +56,7 @@ const PreloadImages: React.FC = () => {
     NukeTs1,
     NukeBackhallS2,
     NukeBackhallS1,
+
     Dust2BackPlatS2,
     Dust2BackPlatS1,
     Dust2BlueS2,

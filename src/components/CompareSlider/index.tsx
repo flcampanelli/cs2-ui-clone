@@ -1,6 +1,7 @@
 import React from "react";
 import ReactCompareImage from "react-compare-image";
 
+import { getImageUrl } from "../../utils/functions";
 import { Container, Header, CompareImageWrapper, ImageLabel } from "./styles";
 
 interface CompareSliderProps {
@@ -20,10 +21,10 @@ const CompareSlider: React.FC<CompareSliderProps> = ({
   rightImageName,
   children,
 }) => {
-  function getImageUrl(imageName: string) {
-    return new URL(`../../assets/images/${imageName}.jpg`, import.meta.url)
-      .href;
-  }
+  // function getImageUrl(imageName: string) {
+  //   return new URL(`../../assets/images/${imageName}.jpg`, import.meta.url)
+  //     .href;
+  // }
 
   return (
     <Container>

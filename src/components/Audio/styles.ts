@@ -1,7 +1,7 @@
+import { getImageUrl } from "../../utils/functions";
 import styled from "styled-components";
 
-export const audio = new URL("../../assets/images/audio.png", import.meta.url)
-  .href;
+export const audio = getImageUrl("audio.png");
 
 export const Description = styled.div`
   display: flex;

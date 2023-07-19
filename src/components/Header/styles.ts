@@ -1,24 +1,13 @@
+import { getImageUrl } from "../../utils/functions";
 import styled from "styled-components";
 
-export const logoCsFullBlack = new URL(
-  "../../assets/images/logo-cs-full-blk.svg",
-  import.meta.url
-).href;
+export const logoCsFullBlack = getImageUrl("logo-cs-full-blk.svg");
 
-export const headerCtt = new URL(
-  "../../assets/images/header-ctt.png",
-  import.meta.url
-).href;
+export const headerCtt = getImageUrl("header-ctt.png");
 
-export const logoCsHeader = new URL(
-  "../../assets/images/logo-cs2-header.svg",
-  import.meta.url
-).href;
+export const logoCsHeader = getImageUrl("logo-cs2-header.svg");
 
-const cs2HeaderBg = new URL(
-  "../../assets/images/cs2-header-bg.svg",
-  import.meta.url
-).href;
+const cs2HeaderBg = getImageUrl("cs2-header-bg.svg");
 
 export const Container = styled.div`
   background-image: url(${cs2HeaderBg});

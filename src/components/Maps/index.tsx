@@ -100,8 +100,8 @@ const Maps: React.FC = () => {
           bodyText="Os mapas reformulados foram refeitos do zero, aproveitando todas as
               novas ferramentas e recursos de renderização da Source 2."
           exampleMap="Overpass"
-          leftImageName={`${overpassImage}2`}
-          rightImageName={`${overpassImage}1`}
+          leftImageName={`${overpassImage}2.jpg`}
+          rightImageName={`${overpassImage}1.jpg`}
         >
           <ButtonContainer>
             <Button
@@ -137,8 +137,8 @@ const Maps: React.FC = () => {
               um sistema de renderização baseada na física que produz materiais, luzes e
               reflexos realísticos."
           exampleMap="NUKE"
-          leftImageName={`${nukeImage}2`}
-          rightImageName={`${nukeImage}1`}
+          leftImageName={`${nukeImage}2.jpg`}
+          rightImageName={`${nukeImage}1.jpg`}
         >
           <ButtonContainer>
             <Button
@@ -175,8 +175,8 @@ const Maps: React.FC = () => {
               aprimorados com melhor iluminação e legibilidade, mas não mudaram além
               disso."
           exampleMap="Dust II"
-          leftImageName={`${dustImage}2`}
-          rightImageName={`${dustImage}1`}
+          leftImageName={`${dustImage}2.jpg`}
+          rightImageName={`${dustImage}1.jpg`}
         >
           <ButtonContainer>
             <Button
