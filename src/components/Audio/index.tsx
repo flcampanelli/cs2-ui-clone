@@ -6,7 +6,7 @@ import { Description, HeaderText, audio } from "./styles";
 
 const Audio: React.FC = () => {
   return (
-    <ContentBox contentMinHeight={"1200px"} backgroundImage={"bg-orange"}>
+    <ContentBox contentMinHeight="1200px" backgroundImage="bg-orange.svg">
       <Description>
         <HeaderText>Áudio preciso</HeaderText>
 

@@ -6,7 +6,7 @@ import { Description, HeaderText, weapons } from "./styles";
 
 const Inventory: React.FC = () => {
   return (
-    <ContentBox contentMinHeight={"1300px"} backgroundImage={"bg-dark-blue"}>
+    <ContentBox contentMinHeight="1300px" backgroundImage="bg-dark-blue.svg">
       <Description>
         <HeaderText>Os seus itens sob uma nova luz</HeaderText>
 

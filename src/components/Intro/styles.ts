@@ -1,9 +1,7 @@
+import { getImageUrl } from "../../utils/functions";
 import styled from "styled-components";
 
-const bgDarkBlue = new URL(
-  "../../assets/images/bg-dark-blue.svg",
-  import.meta.url
-).href;
+const bgDarkBlue = getImageUrl("bg-dark-blue.svg");
 
 export const Container = styled.section`
   display: flex;
@@ -14,7 +12,6 @@ export const Container = styled.section`
   min-height: 938px;
   background-image: url(${bgDarkBlue});
   background-size: cover;
-  /* background-position: center; */
 `;
 
 export const IntroBox = styled.div`

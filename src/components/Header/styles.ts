@@ -44,10 +44,23 @@ export const HeaderImageContainer = styled.div`
   width: 100%;
   margin-top: 145px;
 
+  @media (max-width: 1200px) {
+    right: 0px;
+    left: 0;
+    justify-content: center;
+  }
+
   img:nth-child(2) {
     position: absolute;
     top: 145px;
     right: 200px;
+
+    @media (max-width: 1200px) {
+      top: -145px;
+      right: 0px;
+      left: 0;
+      margin: auto;
+    }
   }
 `;
 
@@ -71,5 +84,12 @@ export const Subtitle = styled.div`
     font-size: 22px;
     font-weight: 600;
     transform: skewX(+20deg);
+  }
+
+  @media (max-width: 1200px) {
+    top: -25px;
+    right: 0px;
+    left: 0;
+    margin: auto;
   }
 `;

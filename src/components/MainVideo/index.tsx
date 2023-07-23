@@ -1,5 +1,6 @@
 import React from "react";
 
+import { getVideoUrl } from "../../utils/functions";
 import {
   Container,
   VideoContainer,
@@ -16,11 +17,6 @@ interface MainVideoProps {
 }
 
 const MainVideo: React.FC<MainVideoProps> = ({ title, videoName }) => {
-  function getVideoUrl(videoName: string) {
-    return new URL(`../../assets/videos/${videoName}.mp4`, import.meta.url)
-      .href;
-  }
-
   return (
     <Container>
       <VideoContainer>

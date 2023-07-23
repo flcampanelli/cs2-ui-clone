@@ -7,7 +7,7 @@ import { Description, HeaderText } from "./styles";
 
 const VisualEffects: React.FC = () => {
   return (
-    <ContentBox contentMinHeight={"2287px"} backgroundImage={"bg-gray"}>
+    <ContentBox contentMinHeight="2287px" backgroundImage="bg-gray.svg">
       <Description>
         <HeaderText>Efeitos visuais de alta definição</HeaderText>
 

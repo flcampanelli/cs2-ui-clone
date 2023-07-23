@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Container, SubIntro } from "./styles";
+import { getVideoUrl } from "../../utils/functions";
 
 interface VideoRowProps {
   title: string;
@@ -15,11 +16,6 @@ const VideoRow: React.FC<VideoRowProps> = ({
   videoName,
   reverse,
 }) => {
-  function getVideoUrl(videoName: string) {
-    return new URL(`../../assets/videos/${videoName}.mp4`, import.meta.url)
-      .href;
-  }
-
   return (
     <Container reverse={reverse}>
       <video

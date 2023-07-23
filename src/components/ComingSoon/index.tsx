@@ -6,7 +6,7 @@ import { Description, HeaderText } from "./styles";
 
 const ComingSoon: React.FC = () => {
   return (
-    <ContentBox contentMinHeight={"603px"} backgroundImage={"bg-gray"}>
+    <ContentBox contentMinHeight="603px" backgroundImage="bg-gray.svg">
       <Description>
         <HeaderText>Não é só isso</HeaderText>
 

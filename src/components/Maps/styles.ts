@@ -1,9 +1,7 @@
 import styled from "styled-components";
+import { getVideoUrl } from "../../utils/functions";
 
-export const map_s2tools = new URL(
-  "../../assets/videos/map_s2tools.mp4",
-  import.meta.url
-).href;
+export const map_s2tools = getVideoUrl("map_s2tools");
 
 interface ButtonProps {
   selectedDustMapArea?: boolean;

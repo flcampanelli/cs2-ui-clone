@@ -1,5 +1,5 @@
-import { getImageUrl } from "../../utils/functions";
 import styled from "styled-components";
+import { getImageUrl } from "../../utils/functions";
 
 export const audio = getImageUrl("audio.png");
 

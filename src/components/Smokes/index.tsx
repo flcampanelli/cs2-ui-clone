@@ -8,7 +8,7 @@ import { HeaderText, Description } from "./styles";
 
 const Smokes: React.FC = () => {
   return (
-    <ContentBox contentMinHeight="2485px" backgroundImage="bg-gray">
+    <ContentBox contentMinHeight="2485px" backgroundImage="bg-gray.svg">
       <MainVideo title="Fumaças Interativas" videoName="video_smokes" />
 
       <Description>

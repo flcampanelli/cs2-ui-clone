@@ -1,5 +1,6 @@
 import React from "react";
 
+import { getImageUrl } from "../../utils/functions";
 import { Container, Content } from "./styles";
 
 interface ContentBoxProps {
@@ -13,11 +14,6 @@ const ContentBox: React.FC<ContentBoxProps> = ({
   contentMinHeight,
   backgroundImage,
 }) => {
-  function getImageUrl(imageName: string) {
-    return new URL(`../../assets/images/${imageName}.svg`, import.meta.url)
-      .href;
-  }
-
   return (
     <Container
       backgroundImage={getImageUrl(backgroundImage)}
