@@ -12,6 +12,7 @@ export const VideoContainer = styled.div`
 
   width: 100%;
   height: 620px;
+  background: #000;
 
   transition: all 0.3s ease-in-out;
 

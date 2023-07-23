@@ -17,6 +17,7 @@ const Layout: React.FC = () => {
   return (
     <Container>
       <Header />
+
       <Intro />
       <Smokes />
       <Ticks />

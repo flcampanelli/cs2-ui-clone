@@ -1,9 +1,7 @@
 import styled from "styled-components";
+import { getVideoUrl } from "../../utils/functions";
 
-export const weapons = new URL(
-  "../../assets/videos/weapons.mp4",
-  import.meta.url
-).href;
+export const weapons = getVideoUrl("weapons");
 
 export const Description = styled.div`
   display: flex;
