@@ -23,7 +23,7 @@ export const Content = styled.div`
 
   width: 100%;
   max-width: 1600px;
-  height: 930px;
+  min-height: 930px;
   margin: 0 auto;
 `;
 
@@ -44,10 +44,16 @@ export const HeaderImageContainer = styled.div`
   width: 100%;
   margin-top: 145px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1530px) {
     right: 0px;
     left: 0;
     justify-content: center;
+  }
+
+  img:nth-child(1) {
+    @media (max-width: 1530px) {
+      margin-top: 20px;
+    }
   }
 
   img:nth-child(2) {
@@ -55,7 +61,7 @@ export const HeaderImageContainer = styled.div`
     top: 145px;
     right: 200px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1530px) {
       top: -145px;
       right: 0px;
       left: 0;
@@ -86,7 +92,7 @@ export const Subtitle = styled.div`
     transform: skewX(+20deg);
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1530px) {
     top: -25px;
     right: 0px;
     left: 0;

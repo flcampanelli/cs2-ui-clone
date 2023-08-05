@@ -1,25 +1,22 @@
-import React, { useEffect } from "react";
+import React from "react";
 import YouTube from "react-youtube";
 
 interface YouTubePlayerProps {
   videoId: string;
-  onStateChange: any;
+  onPause: any;
+  pausedTime: number;
 }
 
 const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   videoId,
-  onStateChange,
+  onPause,
+  pausedTime,
 }) => {
-  const onPlayerStateChange = (event: { target: any; data: number }) => {
-    if (event.data === 2) {
-      setTimeout(onStateChange, 500);
-    }
-  };
-
   const opts: any = {
     height: "620px",
-    width: "100%",
+    width: "1100px",
     playerVars: {
+      start: pausedTime,
       autoplay: 1,
     },
   };
@@ -28,7 +25,8 @@ const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
     <YouTube
       videoId={videoId}
       opts={opts}
-      onStateChange={onPlayerStateChange}
+      onPause={onPause}
+      style={{ position: "absolute", top: 0, left: 0 }}
     />
   );
 };

@@ -9,7 +9,11 @@ import { HeaderText, Description } from "./styles";
 const Smokes: React.FC = () => {
   return (
     <ContentBox contentMinHeight="2485px" backgroundImage="bg-gray.svg">
-      <MainVideo title="Fumaças Interativas" videoName="video_smokes" />
+      <MainVideo
+        title="Fumaças Interativas"
+        videoName="video_smokes"
+        videoId="_y9MpNcAitQ"
+      />
 
       <Description>
         <HeaderText>O JOGO MUDOU</HeaderText>

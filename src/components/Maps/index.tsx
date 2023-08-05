@@ -85,7 +85,11 @@ const Maps: React.FC = () => {
 
   return (
     <ContentBox contentMinHeight="4460px" backgroundImage="bg-gray.svg">
-      <MainVideo title="Admiráveis mapas novos" videoName="video_maps" />
+      <MainVideo
+        title="Admiráveis mapas novos"
+        videoName="video_maps"
+        videoId="ExZtISgOxEQ"
+      />
 
       <Description>
         <HeaderText>Não é nostalgia, é tecnologia</HeaderText>

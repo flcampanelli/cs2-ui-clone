@@ -15,18 +15,27 @@ import {
 interface MainVideoProps {
   title: string;
   videoName: string;
+  videoId: string;
 }
 
-const MainVideo: React.FC<MainVideoProps> = ({ title, videoName }) => {
+const MainVideo: React.FC<MainVideoProps> = ({ title, videoName, videoId }) => {
   const [playing, setPlaying] = useState(false);
+  const [pausedTime, setPausedTime] = useState(0);
+
+  const onPause = (event: { target: any; data: number }) => {
+    setTimeout(setPlaying, 500);
+    //setPausedTime(event.target.getCurrentTime());
+    console.log(event.target.getCurrentTime());
+  };
 
   return (
     <Container>
       <VideoContainer onClick={() => setPlaying(!playing)}>
         {playing ? (
           <YouTubePlayer
-            videoId="_y9MpNcAitQ"
-            onStateChange={() => setPlaying(!playing)}
+            videoId={videoId}
+            onPause={onPause}
+            pausedTime={pausedTime}
           />
         ) : (
           <>

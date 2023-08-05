@@ -8,7 +8,11 @@ import { Description, HeaderText } from "./styles";
 const Ticks: React.FC = () => {
   return (
     <ContentBox contentMinHeight="1445px" backgroundImage="bg-orange.svg">
-      <MainVideo title="Indo além dos tiques" videoName="video_ticks" />
+      <MainVideo
+        title="Indo além dos tiques"
+        videoName="video_ticks"
+        videoId="GqhhFl5zgA0"
+      />
 
       <Description>
         <HeaderText>Tique, taque, tchau</HeaderText>
