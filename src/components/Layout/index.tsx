@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "../Header";
 import Intro from "../Intro";
+import Matchmaking from "../Matchmaking";
 import Smokes from "../Smokes";
 import Ticks from "../Ticks";
 import Maps from "../Maps";
@@ -19,6 +20,7 @@ const Layout: React.FC = () => {
       <Header />
 
       <Intro />
+      <Matchmaking />
       <Smokes />
       <Ticks />
       <Maps />

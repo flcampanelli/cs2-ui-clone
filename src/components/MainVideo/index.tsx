@@ -16,9 +16,15 @@ interface MainVideoProps {
   title: string;
   videoName: string;
   videoId: string;
+  width?: string;
 }
 
-const MainVideo: React.FC<MainVideoProps> = ({ title, videoName, videoId }) => {
+const MainVideo: React.FC<MainVideoProps> = ({
+  title,
+  videoName,
+  videoId,
+  width,
+}) => {
   const [playing, setPlaying] = useState(false);
   const [pausedTime, setPausedTime] = useState(0);
 
@@ -50,7 +56,7 @@ const MainVideo: React.FC<MainVideoProps> = ({ title, videoName, videoId }) => {
               <source src={getVideoUrl(videoName)} type="video/mp4" />
             </video>
 
-            <Overlay>
+            <Overlay width={width}>
               <VideoSubHeaderText>
                 <h2>Counter-Strike 2:</h2>
               </VideoSubHeaderText>

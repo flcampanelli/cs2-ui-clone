@@ -5,6 +5,10 @@ export const playButton = new URL(
   import.meta.url
 ).href;
 
+interface OverlayProps {
+  width?: string;
+}
+
 export const Container = styled.div``;
 
 export const VideoContainer = styled.div`
@@ -22,7 +26,7 @@ export const VideoContainer = styled.div`
   }
 `;
 
-export const Overlay = styled.div`
+export const Overlay = styled.div<OverlayProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +37,7 @@ export const Overlay = styled.div`
   bottom: 0;
   left: 0;
 
-  width: 720px;
+  width: ${(props) => (props.width ? props.width : "720px")};
   margin-left: 50px;
 
   text-transform: uppercase;
