@@ -58,7 +58,7 @@ export const HeaderImageContainer = styled.div`
 
   img:nth-child(2) {
     position: absolute;
-    top: 145px;
+    top: 175px;
     right: 200px;
 
     @media (max-width: 1530px) {

@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from "react";
-
+import React, { useState } from "react";
 import YouTubePlayer from "../YotubePlayer";
+
 import { getVideoUrl } from "../../utils/functions";
+
 import {
   Container,
   VideoContainer,

@@ -1,13 +1,15 @@
 import React from "react";
 
+import AnimatedElement from "../AnimatedElement";
+
 import {
   Container,
   Content,
   Figure,
   HeaderImageContainer,
   Subtitle,
-  headerCtt,
   logoCsFullBlack,
+  headerCtt,
   logoCsHeader,
 } from "./styles";
 
@@ -20,13 +22,29 @@ const Header: React.FC = () => {
         </Figure>
 
         <HeaderImageContainer>
-          <img src={headerCtt} width="932" height="710" alt="" />
+          <img
+            src={headerCtt}
+            width="932"
+            height="710"
+            alt=""
+            data-aos="fade-right"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          />
 
-          <img src={logoCsHeader} width="556" height="114" alt="" />
+          <img
+            src={logoCsHeader}
+            width="556"
+            height="114"
+            alt=""
+            data-aos="fade-left"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          />
 
-          <Subtitle>
+          {/* <Subtitle>
             <h2>TESTE LIMITADO</h2>
-          </Subtitle>
+          </Subtitle> */}
         </HeaderImageContainer>
       </Content>
     </Container>

@@ -21,11 +21,6 @@ const CompareSlider: React.FC<CompareSliderProps> = ({
   rightImageName,
   children,
 }) => {
-  // function getImageUrl(imageName: string) {
-  //   return new URL(`../../assets/images/${imageName}.jpg`, import.meta.url)
-  //     .href;
-  // }
-
   return (
     <Container>
       <Header>{headerText}</Header>

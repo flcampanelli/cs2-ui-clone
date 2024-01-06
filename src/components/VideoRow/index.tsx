@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Container, SubIntro } from "./styles";
 import { getVideoUrl } from "../../utils/functions";
+
+import { Container, SubIntro } from "./styles";
 
 interface VideoRowProps {
   title: string;
