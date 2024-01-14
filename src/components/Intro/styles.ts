@@ -9,7 +9,7 @@ export const Container = styled.section`
   align-items: center;
 
   width: 100%;
-  min-height: 938px;
+  min-height: 572px;
   background-image: url(${bgDarkBlue});
   background-size: cover;
 `;
@@ -20,36 +20,36 @@ export const IntroBox = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  max-width: 650px;
-  min-height: 698px;
+  max-width: 950px;
+  height: 333px;
   padding: 50px 60px;
-  background-color: #4d526a;
+  background-color: #272a3b;
 `;
 
-export const Title = styled.div`
+export const Title = styled.h1`
   display: flex;
-  flex-direction: column;
   justify-content: center;
 
-  & > span {
-    margin: 0 auto;
-    font-size: 53px;
-    font-weight: 500;
-    line-height: 102%;
-    color: rgba(255, 255, 255, 0.95);
-  }
+  font-size: 38px;
+  line-height: 102%;
+  color: rgba(255, 255, 255, 0.95);
 
-  & > span:nth-child(2) {
+  margin-bottom: 20px;
+
+  & > span {
     font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 8px;
   }
 `;
 
 export const Description = styled.div`
   margin-top: 5px;
 
-  text-align: justify;
-  font-size: 20px;
+  font-size: 19.5px;
   line-height: 120%;
+  text-align: justify;
+  /* word-spacing: 2px; */
 
   & > p {
     font-weight: 500;

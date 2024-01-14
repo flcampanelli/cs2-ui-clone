@@ -10,14 +10,14 @@ const ComingSoon: React.FC = () => {
     <ContentBox contentMinHeight="603px" backgroundImage="bg-gray.svg">
       <AnimatedElement animationType="fade-left" duration={1000}>
         <Description>
-          <HeaderText>Não é só isso</HeaderText>
+          <HeaderText>O COUNTER-STRIKE 2 ESTÁ AQUI</HeaderText>
 
           <p>
-            O Teste Limitado existe para avaliar um subconjunto dos recursos do
-            Counter-Strike 2. Dessa forma, problemas graves poderão ser
-            resolvidos antes do lançamento. Mas ainda há muito mais por vir. Nos
-            próximos meses, revelaremos todos os detalhes do Counter-Strike 2, e
-            mal podemos esperar para compartilhar tudo com vocês.
+            A comunidade do Counter-Strike passou meses jogando no Teste
+            Limitado do CS2 e enviando comentários para ajudar a moldar o jogo
+            antes do seu lançamento. Junte-se a milhões de jogadores que estão
+            aperfeiçoando as suas habilidades e subindo de patente. Damos as
+            boas-vindas ao Counter-Strike 2.
           </p>
         </Description>
       </AnimatedElement>

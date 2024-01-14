@@ -10,9 +10,7 @@ const Intro: React.FC = () => {
       <AnimatedElement animationType="fade-up" delay={0}>
         <IntroBox>
           <Title>
-            <span>A PRÓXIMA ERA DO</span>
-            <span>COUNTER-STRIKE</span>
-            <span>COMEÇA NESTE INVERNO</span>
+            A PRÓXIMA ERA DO <span> COUNTER-STRIKE </span> CHEGOU!
           </Title>
           <Description>
             <p>
@@ -22,22 +20,14 @@ const Intro: React.FC = () => {
             </p>
 
             <p>
-              Todos os novos recursos do jogo serão revelados no lançamento
-              oficial no inverno, mas a jornada para o Counter-Strike 2 começa
-              hoje com o Teste Limitado para jogadores selecionados do CS:GO.
-              Nesse período, avaliaremos um subconjunto dos recursos para
-              resolver problemas graves antes do lançamento mundial.
+              O Counter-Strike 2 é uma atualização gratuita para o CS:GO.
+              Portanto, monte o seu arsenal, aperfeiçoe as suas habilidades e
+              prepare-se para o que está por vir!
             </p>
 
             <p>
-              O Counter-Strike 2 será lançado neste inverno como uma atualização
-              gratuita do CS:GO. Portanto, monte o seu arsenal, aperfeiçoe as
-              suas habilidades e prepare-se para o que está por vir!
-            </p>
-
-            <p>
-              Continue lendo para conhecer alguns dos recursos do Teste Limitado
-              do Counter-Strike 2.
+              Continue lendo para conhecer alguns dos recursos do Counter-Strike
+              2.
             </p>
           </Description>
         </IntroBox>

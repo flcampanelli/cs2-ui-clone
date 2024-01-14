@@ -54,6 +54,11 @@ export const HeaderImageContainer = styled.div`
     @media (max-width: 1530px) {
       margin-top: 20px;
     }
+
+    @media (max-width: 932px) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   img:nth-child(2) {
@@ -66,6 +71,11 @@ export const HeaderImageContainer = styled.div`
       right: 0px;
       left: 0;
       margin: auto;
+    }
+
+    @media (max-width: 556px) {
+      width: 100%;
+      height: auto;
     }
   }
 `;
